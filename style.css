@@ -425,11 +425,28 @@ footer{
         border-radius: 50%;
     }
 
+    /* Index */
+
+    .nuestros_productos{
+        
+    }
+
+    .nuestros_productos p{
+        padding: 0;
+        padding-top: 5vh;
+        width: 50%;
+    }
+
    /*  Nosotros */
+
+    .texto_nosotros p{
+        padding-top: 2vh;
+        width: 50%;
+    }
 
     .video_nosotros{
         width: 95%;
-        height: 20vh;
+        height: 25vh;
     }
 
     video{
@@ -461,6 +478,16 @@ footer{
 
     /* Ubicacion */
 
+    .texto_ubicacion div{
+        display: flex;
+        justify-content: center;
+    }
+
+    .texto_ubicacion p{
+        padding-top: 2vh;
+        width: 50%;
+    }
+
     .iframe_ubicacion{
         background-color: #fdecc08b;
         width: 80vw;
@@ -478,6 +505,11 @@ footer{
 
 
     /* Contacto */
+
+    .texto_contacto p{
+        padding-top: 2vh;
+        width: 50%;
+    }
 
     .seccion_formulario{
         width: 100%;
@@ -515,5 +547,9 @@ footer{
 
     .footer_info_item{
         min-width: 90%;
+    }
+
+    .footer_logo_pyc{
+        padding-top: 1vh;
     }
 }
