@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../logos/Medialuna.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Pan & Cia - Productos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecera">
+        <nav id="nav_desktop">
+            <ul class="navegacion">
+                <li>
+                    <a href="../paginas/nosotros.html" class="navegacion_item"> Nosotros </a>
+                </li>
+                <li>
+                    <a href="#" class="navegacion_item"> Productos </a>
+                </li>
+                <li>
+                    <a href="../index.html" id="logo">
+                        <img class="logo_panycia" src="../logos/2.png" alt="Logo Pan y Cia"> Panadería y confitería
+                    </a>
+                </li>
+                <li>
+                    <a href="../paginas/ubicacion.html" class="navegacion_item"> Ubicación </a>
+                </li>
+                <li>
+                    <a href="../paginas/contacto.html" class="navegacion_item"> Contacto </a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="nav_mobile">
+            <div>
+                <a href="../index.html" id="logo_mobile">
+                    <img class="logo_panycia_m" src="../logos/2.png" alt="Logo Pan y Cia">
+                </a>
+            </div>
+            <div>
+                <input type="checkbox" id="boton_menu">
+                <label for="boton_menu" id="label_boton"> <img src="../logos/menu.png" alt="menu desplegable" id="logo_menu_m"></label>
+                <ul class="navegacion_mobile">
+                    <li>
+                        <a href="../paginas/nosotros.html" class="navegacion_item_mobile"> Nosotros </a>
+                    </li>
+                    <li>
+                        <a href="#" class="navegacion_item_mobile"> Productos </a>
+                    </li>
+                    <li>
+                        <a href="../paginas/ubicacion.html" class="navegacion_item_mobile"> Ubicación </a>
+                    </li>
+                    <li>
+                        <a href="../paginas/contacto.html" class="navegacion_item_mobile"> Contacto </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container_productos">
+            <h2 id="productos_titulo">Productos</h2>
+            <div class="productos">
+                <h3>Panadería</h3>
+                <div class="flex_container">
+                    <table class="productos_tabla">
+                        <tr>
+                            <th> </th>
+                            <th>Medio kilo</th>
+                            <th>Kilo</th>
+                        </tr>
+                        <tr>
+                            <th> Pan</th>
+                            <td>$ 130</td>
+                            <td>$ 260</td>
+                        </tr>
+                        <tr>
+                            <th>Galleta de nuez</th>
+                            <td>$ 140</td>
+                            <td>$ 280</td>
+                        </tr>
+                    </table>
+                    <img src="../fotos/pan.jpg" alt="foto del pan" class="foto_producto">
+                </div>
+            </div>
+        <div class="productos">
+            <h3>Confitería</h3>
+            <div class="flex_container">
+                <img src="../fotos/facturas.png" alt="foto de las facturas" class="foto_producto" id="foto_facturas">
+                <table class="productos_tabla" id="confiteria_link">
+                    <tr>
+                        <th> </th>
+                        <th> Individual</th>
+                        <th>Una docena</th>
+                    </tr>
+                    <tr>
+                        <th>Facturas</th>
+                        <td>$ 50</td>
+                        <td>$ 600</td>
+                    </tr>
+                    <tr>
+                        <th>Sándwich de miga</th>
+                        <td>$ 100</td>
+                        <td>$ 1200</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="productos">
+            <h3>Pastelería</h3>
+            <div class="flex_container">
+                <table class="productos_tabla" id="pasteleria_link">
+                    <tr>
+                        <th> </th>
+                        <th>Un cuarto</th>
+                        <th>Un kilo</th>
+                    </tr>
+                    <tr>
+                        <th>Tiramisú</th>
+                        <td>$ 350</td>
+                        <td>$1 400</td>
+                    </tr>
+                    <tr>
+                        <th>Milhoja</th>
+                        <td>$ 350</td>
+                        <td>$ 1400</td>
+                    </tr>
+                </table>
+                <img src="../fotos/Tiramisu.jpg" alt="" class="foto_producto">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_general">
+            <div class="footer_logo_pyc">
+                <img src="../logos/2.png" alt="Logo Pan y Cia">
+            </div>
+
+            <div class="footer_info">
+                <div class="footer_info_item">
+                    <h3>Información</h3>
+                    <div class="footer_item">
+                        <a href="../paginas/ubicacion.html">
+                            <img src="../logos/location.png" alt="Ubicación" class="footer_logos_info"> Montevideo 1344
+                        </a>
+                    </div>
+                    <div class="footer_item">
+                        <a href="../paginas/contacto.html">
+                            <img src="../logos/email.png" alt="Contacto por email" class="footer_logos_info">
+                            Panycompania@hotmail.com
+                        </a>
+                    </div>
+                    <div class="footer_item">
+                        <a href="https://api.whatsapp.com/send?phone=+5492494691484&text=Es%20un%20ejemplo"
+                            target="_blank">
+                            <img src="../logos/telephone.png" alt="Contacto por telefóno" class="footer_logos_info"> +54
+                            9 2494691484
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer_info_item">
+                    <h3>Horario</h3>
+                    <div class="footer_item">
+                        <img src="../logos/clock.png" class="footer_logos_info"> Todos los días de 8:00 a 12:30 y 15:30
+                        a 22:00
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
