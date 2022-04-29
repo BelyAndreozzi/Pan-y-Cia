@@ -24,50 +24,8 @@ a{
 
 .cabecera{
     background-color: #fac338b7;
-    position: fixed;
-    width: 100%;
 }
 
-.navegacion{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.navegacion li{
-    display: flex;
-    list-style: none;
-    text-align: center;
-    justify-content: center;
-}
-
-.navegacion li:hover{
-    background-color: #FDECC0;
-}
-
-.navegacion_item{
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-
-#logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo_panycia{
-    padding: 3px;
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-}
-
-#nav_mobile{
-    display: none;
-}
 
                         /* Index */
 
@@ -93,22 +51,12 @@ a{
 
                         /* NOSOTROS */
 .texto_nosotros{
-    padding-top: 15vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.texto_nosotros p{
-    width: 30vw;
-    padding: 3vh 5vh;
+    padding-top: 5vh;
 }
 
 .container_nosotros{
     display: flex;
     justify-content: center;
-    padding-bottom: 3vh;
 }
 
 .video_nosotros{
