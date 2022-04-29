@@ -69,38 +69,11 @@ a{
     display: none;
 }
 
-                                  /*main*/
+                        /* Index */
 
-                        /* INDEX */
-
-.main{
-    height: auto;
-}
-
-.nuestros_productos{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.nuestros_productos h2{
-    padding-top: 15vh;
-}
-
-.nuestros_productos p{
-    width: 30vw;
-    padding: 7vh 7vh;
-}
-
-.productos{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
+.a_productos{
+    text-decoration: none;
+    color: black !important;
 }
 
 .producto_item{
@@ -293,7 +266,7 @@ iframe{
 }
                     
                                   /*footer*/ 
-footer{
+ footer{
     position: sticky;
     top: 100vh;
 }
@@ -343,11 +316,11 @@ footer{
 .footer_logos_info{
     width: 30px;
     padding-right: 7px;
-}
+} 
 
 @media only screen and (max-width: 425px) {
 
-   /*  Nav */
+ Nav 
     #nav_desktop{
         display: none;
     }
@@ -423,13 +396,9 @@ footer{
     .logo_panycia_m{
         width: 70px;
         border-radius: 50%;
-    }
+    } */
 
     /* Index */
-
-    .nuestros_productos{
-        
-    }
 
     .nuestros_productos p{
         padding: 0;
