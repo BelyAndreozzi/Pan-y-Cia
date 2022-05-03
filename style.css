@@ -354,6 +354,10 @@ footer{
     }
 
     #nav_mobile{
+        display: inline;
+    }
+
+    /* #nav_mobile{
         height: 10vh;
         max-width: 100vw;
         display: flex;
@@ -425,7 +429,7 @@ footer{
         width: 70px;
         border-radius: 50%;
     }
-
+ */
     /* Index */
     
     .nuestros_productos p{
