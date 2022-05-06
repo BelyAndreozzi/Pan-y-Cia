@@ -1,0 +1,178 @@
+.navegacion_item, .formulario {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center; }
+
+#logo, .texto_contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.footer_item, .footer_item a {
+  display: flex;
+  align-items: center; }
+
+.footer_general {
+  display: flex;
+  justify-content: center; }
+
+.navegacion li {
+  display: flex;
+  text-align: center;
+  justify-content: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif; }
+
+body {
+  background-image: url("../logos/fondo icono.png");
+  background-position: center;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none;
+  color: black !important; }
+
+.cabecera {
+  background-color: #fac338b7;
+  position: fixed;
+  width: 100%;
+  height: max-content;
+  z-index: 99; }
+
+.navegacion {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly; }
+  .navegacion li {
+    list-style: none; }
+
+.navegacion li:hover {
+  background-color: #FDECC0; }
+
+.logo_panycia {
+  padding: 3px;
+  width: 100px;
+  height: auto;
+  border-radius: 50%; }
+
+#nav_mobile {
+  display: none; }
+
+@media only screen and (max-width: 425px) {
+  #nav_desktop {
+    display: none; }
+  #nav_mobile {
+    display: inline; }
+  .logo_panycia_m {
+    border-radius: 50%; } }
+
+footer {
+  position: sticky;
+  top: 100vh; }
+
+.footer_general {
+  background-color: #fac338b7;
+  width: 100vw;
+  margin: auto;
+  margin-top: 5px;
+  align-items: baseline; }
+
+.footer_info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.footer_info_item {
+  margin: 0vw 2vw 0vw 2vw;
+  max-width: 30vw; }
+
+.footer_info_item h3 {
+  font-weight: bold; }
+
+.footer_logo_pyc {
+  display: flex;
+  align-self: center; }
+  .footer_logo_pyc img {
+    border-radius: 50%;
+    width: 100px; }
+
+.footer_logos_info {
+  width: 30px;
+  padding-right: 7px; }
+
+@media only screen and (max-width: 425px) {
+  .footer_general {
+    flex-direction: column; }
+  .footer_info {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw; }
+  .footer_info_item {
+    min-width: 90%; }
+  .footer_logo_pyc {
+    padding-top: 1vh; } }
+
+.texto_contacto {
+  padding-top: 15vh; }
+  .texto_contacto p {
+    text-align: center;
+    width: 30vw;
+    padding: 4vh 7vh; }
+
+.form_item {
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 16px; }
+
+input {
+  height: 45px; }
+
+textarea {
+  width: 100%;
+  resize: none; }
+
+form .submit {
+  background-color: #FDECC0;
+  border-color: transparent;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px; }
+
+form .submit:hover {
+  background-color: #fac338;
+  cursor: pointer; }
+
+@media only screen and (max-width: 425px) {
+  .texto_contacto p {
+    padding-top: 2vh;
+    width: 80%; }
+  .seccion_formulario {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center; }
+  .formulario {
+    width: 80%; }
+    .formulario div {
+      width: 100%; }
+  .form_item {
+    width: 100%;
+    background-color: #fdecc08b; } }

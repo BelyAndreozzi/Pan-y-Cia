@@ -1,0 +1,42 @@
+.cabecera{
+    background-color: $color-principal-transparente;
+    position: fixed;
+    width: 100%;
+    height: max-content;
+    z-index: 99;
+}
+
+.navegacion{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+
+        li{
+            list-style: none;
+            @extend %flex-text-justify;
+    }
+}
+
+.navegacion li:hover{
+    background-color: #FDECC0;
+}
+
+.navegacion_item{
+    @extend %flex-col-text;
+}
+
+#logo{
+    @extend %flex-col-items;
+}
+
+.logo_panycia{
+    padding: 3px;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#nav_mobile{
+    display: none;
+}
