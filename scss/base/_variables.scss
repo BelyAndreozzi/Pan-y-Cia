@@ -40,3 +40,15 @@ $padding-t-h2: 15vh;
     text-align: center;
     justify-content: center;
 }
+
+@mixin flexbox ($text, $justify) {
+    display: flex;
+    text-align: $text;
+    justify-content: $justify;
+}
+
+$width-size:(
+    total: 100%,
+    casi-total: 80%,
+    
+)

@@ -1,26 +1,24 @@
 @media only screen and (max-width: 425px) {
 .texto_contacto p{
     padding-top: 2vh;
-    width: 80%;
+    width: map-get($width-size, casi-total);
 }
 
 .seccion_formulario{
     width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    @include flexbox (center, center)
 }
 
 .formulario{
-    width: 80%;
+    width: map-get($width-size, casi-total);
     
         div{
-            width: 100%;
+            width: map-get($width-size, total);
     }
 }
 
 .form_item{
-    width: 100%;
+    width: map-get($width-size, total);
     background-color: #fdecc08b
 }
 }
