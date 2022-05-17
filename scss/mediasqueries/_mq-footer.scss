@@ -1,0 +1,19 @@
+@media only screen and (max-width: 425px) {
+.footer_general{
+    flex-direction: column;
+}
+
+.footer_info{ 
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.footer_info_item{
+    min-width: 90%;
+}
+
+.footer_logo_pyc{
+    padding-top: 1vh;
+}
+}

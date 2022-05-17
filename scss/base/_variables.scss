@@ -1,0 +1,54 @@
+
+$color-principal-solido: #fac338;
+$color-principal-transparente: #fac338b7;
+$color-secundario-transparente: #fdecc08b;
+
+
+$padding-t-h2: 15vh; 
+
+%flex-col-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+%flex-col-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flex-items{
+    display: flex;
+    align-items: center;
+}
+
+%flex-justify{
+    display: flex;
+    justify-content: center;
+}
+
+%flex-items-justify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%flex-text-justify{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin flexbox ($text, $justify) {
+    display: flex;
+    text-align: $text;
+    justify-content: $justify;
+}
+
+$width-size:(
+    total: 100%,
+    casi-total: 80%,
+    
+)

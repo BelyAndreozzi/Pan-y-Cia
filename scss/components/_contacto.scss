@@ -1,0 +1,50 @@
+.texto_contacto{
+    padding-top: $padding-t-h2;
+    @extend %flex-col-items;
+
+        p{
+            text-align: center;
+            width: 30vw;
+            padding: 4vh 7vh;
+    }
+}
+
+.formulario{
+    @extend %flex-col-text 
+}
+
+.form_item{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color:black;
+    font-size: 18px;
+    margin-bottom: 16px; 
+}
+
+input{
+    height: 45px;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+}
+
+form .submit{
+    background-color: #FDECC0;
+    border-color: transparent;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+form .submit:hover{
+    background-color: $color-principal-solido;
+    cursor: pointer;
+}

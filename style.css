@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Karla', sans-serif;
-}
+
 
 
                                 /*body*/
@@ -74,11 +70,10 @@ a{
 
                                 /*main*/
 
-                        /* INDEX */
-
 .main{
-    height: auto;
-}
+height: auto;}
+
+                        /* INDEX */
 
 .nuestros_productos{
     display: flex;
@@ -206,7 +201,6 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .texto_contacto p{
@@ -482,8 +476,6 @@ footer{
 
     .footer_general{
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 
     .footer_info{ 
