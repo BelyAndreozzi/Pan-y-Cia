@@ -17,6 +17,11 @@
   display: flex;
   justify-content: center; }
 
+.video_nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .navegacion li {
   display: flex;
   text-align: center;
@@ -38,6 +43,9 @@ body {
 a {
   text-decoration: none;
   color: black !important; }
+
+.main {
+  height: auto; }
 
 .cabecera {
   background-color: #fac338b7;
@@ -122,6 +130,186 @@ footer {
   .footer_logo_pyc {
     padding-top: 1vh; } }
 
+.nuestros_productos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
+
+.nuestros_productos h2 {
+  padding-top: 15vh; }
+
+.nuestros_productos p {
+  width: 30vw;
+  padding: 7vh 7vh; }
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.producto_item {
+  background-color: #fdecc0e1;
+  border-radius: 35px;
+  margin: 1vw;
+  padding: 2vw; }
+
+.logo_productos {
+  width: 10vw; }
+
+@media only screen and (max-width: 425px) {
+  .nuestros_productos p {
+    padding: 0;
+    padding-top: 5vh;
+    width: 50%; } }
+
+.container_productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 15vh; }
+
+.productos {
+  padding: 7vh;
+  display: flex;
+  flex-direction: column; }
+
+.flex_container {
+  display: flex;
+  flex-direction: row; }
+
+.productos_tabla {
+  margin-top: 15px;
+  border-collapse: collapse;
+  min-width: 150px; }
+
+.productos_tabla tr th {
+  text-align: left; }
+
+.productos_tabla tr {
+  border-bottom: 1px solid #fac338; }
+
+.productos_tabla th {
+  padding: 12px 15px; }
+
+.foto_producto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  object-fit: cover;
+  align-self: flex-end; }
+
+@media only screen and (max-width: 425px) {
+  .container_productos {
+    padding-top: 10vh; }
+  .flex_container {
+    display: flex;
+    flex-direction: column; }
+  .flex_container img {
+    padding-top: 2vh; }
+  .productos_tabla {
+    background-color: #fdecc08b; }
+  .foto_producto {
+    align-self: center; }
+  #foto_facturas {
+    order: 2; }
+  div.productos {
+    padding: 2vh 2vh; } }
+
+.texto_ubicacion {
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
+
+.texto_ubicacion p {
+  text-align: center;
+  width: 30vw;
+  padding: 2vh;
+  margin-bottom: 10px; }
+
+.iframe_container {
+  display: flex;
+  justify-content: center; }
+
+.iframe_ubicacion {
+  background-color: #fdecc08b;
+  width: 45vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 55px; }
+
+iframe {
+  width: 40vw;
+  height: 30vh; }
+
+.texto_nosotros {
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
+
+.texto_nosotros p {
+  width: 30vw;
+  padding: 3vh 5vh; }
+
+.container_nosotros {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3vh; }
+
+.video_nosotros {
+  background-color: #fdecc08b;
+  width: 50vw;
+  height: 30vw;
+  border-radius: 55px; }
+
+video {
+  width: 45vw;
+  height: auto; }
+
+@media only screen and (max-width: 425px) {
+  .texto_nosotros p {
+    padding-top: 1vh;
+    width: 65%; }
+  .video_nosotros {
+    width: 95%;
+    height: 30vh; }
+  video {
+    width: 80vw; } }
+
+@media only screen and (max-width: 425px) {
+  .texto_ubicacion div {
+    display: flex;
+    justify-content: center; }
+  .texto_ubicacion p {
+    padding-top: 2vh;
+    width: 50%; }
+  .iframe_ubicacion {
+    background-color: #fdecc08b;
+    width: 80vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px; }
+  iframe {
+    width: 70vw;
+    height: 30vh; } }
+
 .texto_contacto {
   padding-top: 15vh; }
   .texto_contacto p {
@@ -136,7 +324,7 @@ footer {
   outline: none;
   border-bottom: 1px solid gray;
   color: black;
-  font-size: 18px;
+  font-size: 1em;
   margin-bottom: 16px; }
 
 input {
@@ -150,7 +338,7 @@ form .submit {
   background-color: #FDECC0;
   border-color: transparent;
   color: black;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: bold;
   letter-spacing: 2px;
   height: 50px;

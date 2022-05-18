@@ -4,5 +4,13 @@
 @import './mediasqueries/mq-header';
 @import './components/footer';
 @import './mediasqueries/mq-footer';
-@import './components/contacto';
-@import './mediasqueries/mq-contacto'
+@import './pages/index';
+@import './mediasqueries/mq-index';
+@import './pages/productos';
+@import './mediasqueries/mq-productos';
+@import './pages/ubicacion';
+@import './pages/nosotros';
+@import './mediasqueries/mq-nosotros';
+@import './mediasqueries/mq-ubicacion';
+@import './pages/contacto';
+@import './mediasqueries/mq-contacto';

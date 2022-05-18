@@ -47,6 +47,14 @@ $padding-t-h2: 15vh;
     justify-content: $justify;
 }
 
+@mixin flexboxcompleto ($direction, $text, $justify, $items) {
+    display: flex;
+    flex-direction: $direction;
+    text-align: $text;
+    justify-content: $justify;
+    align-items: $items;
+}
+
 $width-size:(
     total: 100%,
     casi-total: 80%,

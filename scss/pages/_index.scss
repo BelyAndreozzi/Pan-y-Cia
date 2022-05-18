@@ -1,0 +1,28 @@
+.nuestros_productos{
+    @include flexboxcompleto (column, center, center, center);
+}
+
+.nuestros_productos h2{
+    padding-top: 15vh;
+}
+
+.nuestros_productos p{
+    width: 30vw;
+    padding: 7vh 7vh;
+}
+
+.productos{
+    @include flexboxcompleto (column, center, space-evenly, center);
+    flex-wrap: wrap;
+}
+
+.producto_item{
+    background-color: #fdecc0e1;
+    border-radius: 35px;
+    margin: 1vw;
+    padding: 2vw;
+}
+
+.logo_productos{
+    width: 10vw;
+}

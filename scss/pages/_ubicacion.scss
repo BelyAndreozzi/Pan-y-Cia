@@ -1,0 +1,32 @@
+.texto_ubicacion{
+    padding-top: 15vh;
+    @include flexboxcompleto (column, center, center, center);
+}
+
+.texto_ubicacion p{
+    text-align: center;
+    width: 30vw;
+    padding: 2vh;
+    margin-bottom: 10px;
+
+}
+
+.iframe_container{
+    display: flex;
+    justify-content: center;
+}
+
+.iframe_ubicacion{
+    background-color: $color-secundario-transparente;
+    width: 45vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+}
+
+iframe{
+    width: 40vw;
+    height: 30vh;
+}

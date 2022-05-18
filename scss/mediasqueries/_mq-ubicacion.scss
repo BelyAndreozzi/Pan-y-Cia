@@ -1,0 +1,26 @@
+@media only screen and (max-width: 425px) {
+.texto_ubicacion div{
+    display: flex;
+    justify-content: center;
+}
+
+.texto_ubicacion p{
+    padding-top: 2vh;
+    width: 50%;
+}
+
+.iframe_ubicacion{
+    background-color: $color-secundario-transparente;
+    width: 80vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+}
+
+iframe{
+    width: 70vw;
+    height: 30vh;
+}
+}

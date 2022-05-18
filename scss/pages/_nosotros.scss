@@ -1,0 +1,28 @@
+.texto_nosotros{
+    padding-top: 15vh;
+    @include flexboxcompleto (column, center, center, center)
+}
+
+.texto_nosotros p{
+    width: 30vw;
+    padding: 3vh 5vh;
+}
+
+.container_nosotros{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vh;
+}
+
+.video_nosotros{
+    background-color: $color-secundario-transparente;
+    width: 50vw;
+    height: 30vw;
+    border-radius: 55px;
+    @extend %flex-items-justify;
+}
+
+video{
+    width: 45vw;
+    height: auto;   
+}
