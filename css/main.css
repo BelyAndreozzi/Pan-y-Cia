@@ -67,8 +67,8 @@ a {
 
 .logo_panycia {
   padding: 3px;
-  width: 100px;
-  height: auto;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%; }
 
 #nav_mobile {
@@ -112,10 +112,12 @@ footer {
   align-self: center; }
   .footer_logo_pyc img {
     border-radius: 50%;
-    width: 100px; }
+    width: 6rem;
+    height: 6rem; }
 
 .footer_logos_info {
-  width: 30px;
+  width: 2rem;
+  height: 1.5rem;
   padding-right: 7px; }
 
 @media only screen and (max-width: 425px) {
@@ -159,9 +161,10 @@ footer {
   padding: 2vw; }
 
 .logo_productos {
-  width: 10vw; }
+  width: 25%;
+  height: 25%; }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   .nuestros_productos p {
     padding: 0;
     padding-top: 5vh;
@@ -170,18 +173,19 @@ footer {
 .container_productos {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   padding-top: 15vh; }
 
 .productos {
-  padding: 7vh;
-  display: flex;
-  flex-direction: column; }
+  padding: 7vh; }
 
 .flex_container {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  background-color: #fdecc08b;
+  width: 30rem; }
 
 .productos_tabla {
   margin-top: 15px;
@@ -198,24 +202,27 @@ footer {
   padding: 12px 15px; }
 
 .foto_producto {
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   margin-left: 20px;
   margin-right: 20px;
   object-fit: cover;
-  align-self: flex-end; }
+  align-self: center; }
+
+@media only screen and (max-width: 768px) {
+  .flex_container {
+    width: 60vw; } }
 
 @media only screen and (max-width: 425px) {
   .container_productos {
     padding-top: 10vh; }
   .flex_container {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 90vw; }
   .flex_container img {
-    padding-top: 2vh; }
-  .productos_tabla {
-    background-color: #fdecc08b; }
+    margin-top: 2vh; }
   .foto_producto {
     align-self: center; }
   #foto_facturas {
@@ -280,6 +287,16 @@ iframe {
 video {
   width: 45vw;
   height: auto; }
+
+@media only screen and (max-width: 768px) {
+  .texto_nosotros p {
+    padding-top: 1vh;
+    width: 65%; }
+  .video_nosotros {
+    width: 80%;
+    height: 40vh; }
+  video {
+    width: 70vw; } }
 
 @media only screen and (max-width: 425px) {
   .texto_nosotros p {
@@ -348,7 +365,7 @@ form .submit:hover {
   background-color: #fac338;
   cursor: pointer; }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   .texto_contacto p {
     padding-top: 2vh;
     width: 80%; }
