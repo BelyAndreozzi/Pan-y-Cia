@@ -1,97 +1,162 @@
-.container_productos{
-    @include flexboxcompleto (column, center, center, center);
-    padding-top: 15vh;
+.container_productos {
+  @include flexboxcompleto (column, center, center, center);
+  padding-top: 15vh;
 }
 
-#productos_tienda{
-    display: flex;
-    flex-wrap: wrap;
-    
+#productos_tienda {
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
-/* .container1{
-    display: flex;
-    flex-direction: column;
-    background-color: $color-principal-transparente;
-    width: 100%;
-    height: 100%;
-    margin: 8vh;
+.container_productos_carrito{
+  display: flex;
+  flex-direction: row;
+}
+
+.container_carrito_entero{
+  align-self: center;
+}
+
+.cart-logo-container{
+  height: 6em;
+  width: 6em;
+  background-color: yellow;
+  border-radius: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-logo{
+  height: 70%;
+}
+
+.card {
+  background-color: $color-principal-solido;
+  margin: 5vh;
+  width: 15vw;
+  height: 28vh;
+
+
+}
+
+.p_foto {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 9px;
+  object-fit: cover;
+  align-self: center;
+}
+
+.p_boton {
+  -webkit-border-radius: 12;
+  -moz-border-radius: 12;
+  border-radius: 12px;
+  font-family: '';
+  color: #000000;
+  font-size: 18px;
+  background: #FDECC0;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: transparent;
+}
+
+.p_boton:hover {
+  background: #fac338;
+  border: solid 1px #000000;
+  text-decoration: none;
+}
+
+
+.sidecart {
+  border-left: solid 2px #000000;
+  width: 320px;
+  min-width: 320px;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  overflow: auto !important;
+  right: -320px;
+  z-index: 9000;
+  transition: 0.2s ease;
+  background-color: $color-principal-solido;
+}
+
+@media(max-width: 400px) {
+  .sidecart {
+    width: 100vw;
+    right: -100vw;
+  }
+}
+
+.open-cart {
+  right: 0px !important;
+}
+
+.open-cart:before {
+  content: '';
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  background-color: black;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.product-quantity {
+  position: relative;
+}
+
+.product-quantity:after {
+  content: 'x de';
+  white-space: nowrap;
+  position: absolute;
+  z-index: 10;
+  margin-left: 2px;
+}
+
+.p-top-cart{
+  width: 90%;
+  display: flex;
+  align-content: center;
+}
+
+.p-img-cart{
+  display: flex;
+  align-items: center;
+}
+
+.p_cart_info {
+  background-color: $color-principal-transparente;
+  border: solid 1px black;
+  margin: 5px;
+}
+
+/* .p-cart-plusminus{
+  width: 20px;
 } */
 
-.card{
-    background-color: $color-principal-transparente;
-    margin: 5vh;
-    width: 15vw;
-    height: 30vh;
-    
-    
+.sidecart-price>div {
+  margin: auto;
+  width: 100%;
+  white-space: nowrap;
 }
 
-.p_foto{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    margin-left: 20px;
-    margin-right: 20px;
-    object-fit: cover;
-    align-self: center;
+.botonfincompra {
+
+  border: solid 1px #000000;
+  background-color: #faac38b7;
 }
 
-.p_boton{
-
+.botonfincompra:hover {
+  background-color: #ff6200d1;
 }
-
-.sidecart{
-    width: 320px;
-    min-width: 320px;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    overflow:auto !important;
-    right: -320px;
-    z-index: 9000;
-    transition: 0.2s ease;
-  }
-  
-  @media(max-width: 400px){
-    .sidecart{
-      width: 100vw;
-      right: -100vw;
-    }
-  }
-  
-  .open-cart{
-    right: 0px !important;
-  }
-  .open-cart:before{
-    content: '';
-    position: fixed;
-    top: 0px;
-    width: 100vw;
-    height: 100vh;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    pointer-events: none;
-    background-color: black;
-    opacity: 0.5;
-    z-index: -1;
-  }
-  
-  .product-quantity{
-    position: relative;
-  }
-  
-  .product-quantity:after{
-    content: 'x de';
-    white-space: nowrap;
-    position: absolute;
-    z-index: 10;
-    margin-left: 2px;
-  }
-  
-  .sidecart-price > div{
-    margin: auto;
-    width: 100%;
-    white-space: nowrap;
-  }

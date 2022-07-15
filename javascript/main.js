@@ -9,81 +9,88 @@ renderCart();
 const products = [
     {
         "id": 1,
-        "nombre": "pan",
+        "nombre": "Pan - 1 kg",
         "precio": 260,
         "peso": 1,
         "img": "../fotos/pan.jpg",
     },
     {
         "id": 2,
-        "nombre": "galleta de nuez",
+        "nombre": "Galleta de nuez - 1 kg",
         "precio": 280,
         "peso": 1,
-        "img": "./fotos/-----",
+        "img": "../fotos/galletadenuez.jpg",
     },
     {
         "id": 3,
-        "nombre": "pan rallado",
+        "nombre": "Pan rallado - 1 kg",
         "precio": 200,
         "peso": 1,
-        "img": "./fotos/----",
+        "img": "../fotos/panrallado.jpg",
     },
     {
         "id": 4,
-        "nombre": "bizcochos",
+        "nombre": "Bizcochos - 1 kg",
         "precio": 800,
         "peso": 1,
-        "img": "./fotos/-----",
+        "img": "../fotos/bizcochos.jpeg",
     },
     {
         "id": 5,
-        "nombre": "grisines",
+        "nombre": "Grisines - 1 kg",
         "precio": 400,
         "peso": 1,
-        "img": "./fotos/-----",
+        "img": "../fotos/grisines.jpg",
     },
     {
         "id": 6,
-        "nombre": "masitas",
+        "nombre": "Masitas - 1 kg",
         "precio": 1000,
         "peso": 1,
-        "img": "./fotos/-----",
+        "img": "../fotos/masitas.jpg",
     },
     {
         "id": 7,
-        "nombre": "tiramisu",
+        "nombre": "Masas finas - 1 kg",
         "precio": 1400,
         "peso": 1,
-        "img": "./fotos/-----",
+        "img": "../fotos/masasfinas.jpg",
     },
     {
         "id": 8,
-        "nombre": "milhoja",
+        "nombre": "Tiramisú - 1 kg",
         "precio": 1400,
         "peso": 1,
-        "img": "./fotos/-----",
+        "img": "../fotos/tiramisu.jpg",
     },
     {
         "id": 9,
-        "nombre": "merengues",
+        "nombre": "Milhoja - 1 kg",
+        "precio": 1400,
+        "peso": 1,
+        "img": "../fotos/milhojas.jpeg",
+    },
+    {
+        "id": 10,
+        "nombre": "Merengues - 1 kg",
         "precio": 1600,
         "peso": 1,
-        "img": "./fotos/-----",
-    },
-    /* {
-        "id": 10,
-        "nombre": "facturas",
-        "precio": 600,
-        "docena": 1,
-        "img": "./fotos/-----",
+        "img": "../fotos/merengues.jpg",
     },
     {
         "id": 11,
-        "nombre": "sandwich de miga",
+        "nombre": "Facturas - 1 docena",
+        "precio": 600,
+        "docena": 1,
+        "img": "../fotos/facturas.png",
+    },
+    {
+        "id": 12,
+        "nombre": "Sándwich de miga - 1 docena",
         "precio": 1200,
         "docena": 1,
-        "img": "./fotos/-----",
-    }, */
+        "img": "../fotos/sandwichdemiga.jpg",
+    },
 ];
 
 // Mostrar los productos en el DOM. 
@@ -129,8 +136,8 @@ function addToCart(id) {
     renderCart();
 }
 
-//Mostrar el carrito en el DOM.
-function renderCart(params) {
+//Actualizar el carrito en el DOM.
+function renderCart() {
     renderCartItem()
     renderTotalPrice()
 
@@ -144,20 +151,23 @@ function renderCartItem() {
     cartItem.innerHTML = "";
     cart.forEach((item) => {
         cartItem.innerHTML += `
-        <li class="nav-link d-flex flex-wrap flex-row">
-                <div class="col-12 text-light h5 text-center p-0">${item.nombre}</div>
-                <div class="col-4 p-0"> <img class="img-fluid" src="${item.img}" alt="${item.nombre}"> </div>
-            <div class="col-2 bg-primary text-light justify-content-around d-flex flex-column">
-                <div class="btn minus" onclick="quantityChangeInCart('minus', ${item.id})">-</div>
-                <div class="product-quantity m-0 p-0 h5">${item.cantidad}</div>
-                <div class="btn plus" onclick="quantityChangeInCart('plus', ${item.id})">+</div>
+        <li class="p_cart_info nav-link d-flex flex-wrap flex-row">
+            <div class="p-top-cart">        
+                <div class="col-12 text-dark text-center p-0">${item.nombre}</div>
+                <div onclick="removeItem(${item.id})"> <img src="../logos/eliminar.png" class="footer_logos_info"></div>
             </div>
-            <div class="sidecart-price pl-0 col-6 bg-primary text-right d-flex flex-wrap text-light">
-                <div onclick="removeItem(${item.id})">
-                    <img src="../logos/eliminar.png" class="footer_logos_info">
+        
+            <div class="col-4 p-0 p-img-cart"> <img class="img-fluid" src="${item.img}" alt="${item.nombre}"> </div>
+            <div class="col-8">
+                <div class="col-12 text-dark d-flex">
+                    <div class="btn minus m-0 p-0 col-4" onclick="quantityChangeInCart('minus', ${item.id})">-</div>
+                    <div class=" m-0 p-0 h5 col-4">${item.cantidad}</div>
+                    <div class="btn plus m-0 p-0 col-4" onclick="quantityChangeInCart('plus', ${item.id})">+</div>
                 </div>
-                <div class="product-price">$${item.precio}</div>
-                
+
+                <div class="sidecart-price pl-0 col-12  text-right d-flex flex-wrap text-light">
+                    <div class="product-price text-dark">Valor unidad: $${item.precio}</div> 
+                </div>
             </div>
         </li>
         `
@@ -195,10 +205,10 @@ function renderTotalPrice() {
     });
 
     totalPriceUnits.innerHTML = ` 
-    <div class="text-light h5 text-left mx-3">Cantidad de productos: <span class="text-success"
+    <div class="text-dar h5 text-left mx-3">Cantidad de productos: <span class=
     id="sidecart-total">${totalItems}</span></div>
     <div class="p-2">
-    <div class="text-light h5 text-left mx-3">Valor total: <span class="text-success"
+    <div class="text-dark h5 text-left mx-3">Valor total: <span class="text-success"
     id="sidecart-total">$${totalPrice}</span></div>
     <div class="p-2">
 `
@@ -217,3 +227,8 @@ function toggleCart() {
 }
 
 toggleCart();
+
+//Esto es porque ya no sabía qué hacer para finalizar la compra. Al menos por esta entrega jajaja (acepto sugerencias):
+const finalizarCompra = document.getElementById("boton-finalizar-compra")
+
+finalizarCompra.onclick = () => {alert("Nadie había llegado tan lejos.")}

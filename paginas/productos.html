@@ -41,25 +41,6 @@
                     <a href="../paginas/contacto.html" class="navegacion_item"> Contacto </a>
                 </li>
             </ul>
-            <!-- CARRITO DE COMPRAS -->
-            <div>
-                <!-- <button class="btn btn-primary" onclick="toggleCart()">Toggle Cart</button> -->
-                <img src="../logos/cart.png" alt="Carrito de compras" class="footer_logos_info" onclick="toggleCart()">
-                <div class="sidecart bg-dark text-center">
-
-                    <ul class="nav flex-column" id="cart-item">
-                        <div class="text-light h4 m-0 px-4 text-center">
-                            Carrito de compras
-                            <div class="d-inline" onclick="toggleCart()"><i
-                                    class="far text-success float-right fa-arrow-alt-circle-right mt-1"></i></div>
-                        </div>
-                    </ul>
-                    <div id="total-price-units"> 
-                    </div>
-                        <button type="button" class="btn btn-success w-100">Finalizar Compra</button>
-                    </div>
-                </div>
-            </div>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light" id="nav_mobile" style="background-color: #fac338b7;">
             <div class="container-fluid">
@@ -82,12 +63,32 @@
         </nav>
     </header>
     <main>
-        <section class="container_productos">
-            <h2 id="productos_titulo">Productos</h2>
-            <div id="productos_tienda">
-
+        <div class="container_productos_carrito">
+            <!-- CARRITO DE COMPRAS -->
+            <div class="container_carrito_entero">
+                <div class="cart-logo-container">
+                    <img src="../logos/cart.png" alt="Carrito de compras" class="cart-logo" onclick="toggleCart()">
+                </div>
+                <div class="sidecart text-center">
+                    <ul class="nav flex-column" id="cart-item">
+                        <div class="text-dark h4 m-0 px-4 text-center">
+                            Carrito de compras
+                            <div class="d-inline" onclick="toggleCart()"></div>
+                        </div>
+                    </ul>
+                    <div id="total-price-units">
+                    </div>
+                    <button type="button" class="btn w-75 botonfincompra" id="boton-finalizar-compra">Finalizar Compra</button>
+                </div>
             </div>
-        </section>
+            <section class="container_productos">
+                <h2 id="productos_titulo">Productos</h2>
+                <div id="productos_tienda">
+    
+                </div>
+            </section>
+        </div>
+
     </main>
     <footer>
         <div class="footer_general">
