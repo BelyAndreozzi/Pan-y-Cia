@@ -1,6 +1,7 @@
 const cartItem = document.getElementById("cart-item")
 const totalPriceUnits = document.getElementById("total-price-units")
 const addItemAlertButton = document.getElementsByClassName("p_boton");
+const reiniciarCarrito = document.getElementById("boton-reiniciar-carrito")
 const finalizarCompra = document.getElementById("boton-finalizar-compra")
 
 let cart =  JSON.parse(localStorage.getItem("Carrito")) || [];
@@ -247,6 +248,16 @@ function toggleCart() {
 
 toggleCart();
 
+//Reset carrito de compra
+function cartReset() {
+    cart = [];
+    renderCart();
+};
+
+reiniciarCarrito.addEventListener("click", cartReset);
+
+
+
 //Finalización de compra
 finalizarCompra.addEventListener("click", checkout);
 
@@ -258,9 +269,9 @@ function checkout(){
                 icon: 'success',
                 confirm: 'Ok', 
                 timer: 3000
-            })
+            });
     
-
+        cartReset();
     } else {
         swal({
             title: '¡Cuidado!',

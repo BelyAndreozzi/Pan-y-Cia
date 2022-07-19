@@ -294,15 +294,13 @@ footer {
   border: solid 1px black;
   margin: 5px; }
 
-/* .p-cart-plusminus{
-  width: 20px;
-} */
 .sidecart-price > div {
   margin: auto;
   width: 100%;
   white-space: nowrap; }
 
 .botonfincompra {
+  margin-bottom: 10px;
   border: solid 1px #000000;
   background-color: #faac38b7; }
 
