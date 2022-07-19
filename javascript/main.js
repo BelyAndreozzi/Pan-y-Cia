@@ -1,5 +1,7 @@
 const cartItem = document.getElementById("cart-item")
 const totalPriceUnits = document.getElementById("total-price-units")
+const addItemAlertButton = document.getElementsByClassName("p_boton");
+const finalizarCompra = document.getElementById("boton-finalizar-compra")
 
 let cart =  JSON.parse(localStorage.getItem("Carrito")) || [];
 renderCart(); 
@@ -136,6 +138,23 @@ function addToCart(id) {
     renderCart();
 }
 
+
+for (const element of addItemAlertButton) {
+    element.addEventListener('click', (e)=> {
+        Toastify({
+            text: "Agregaste un producto al carrito",
+            duration: 2000,
+            gravity: "bottom",
+            position: "left",
+            style: {background: "#f6d365"},
+            stopOnFocus: true,
+            close: true,
+        }).showToast();
+    });
+}
+
+
+
 //Actualizar el carrito en el DOM.
 function renderCart() {
     renderCartItem()
@@ -228,7 +247,28 @@ function toggleCart() {
 
 toggleCart();
 
-//Esto es porque ya no sabía qué hacer para finalizar la compra. Al menos por esta entrega jajaja (acepto sugerencias):
-const finalizarCompra = document.getElementById("boton-finalizar-compra")
+//Finalización de compra
+finalizarCompra.addEventListener("click", checkout);
 
-finalizarCompra.onclick = () => {alert("Nadie había llegado tan lejos.")}
+function checkout(){
+    if (cart.length >= 1) {
+            swal({
+                title: 'Genial',
+                text: '¡Haz realizado la compra con exito!',
+                icon: 'success',
+                confirm: 'Ok', 
+                timer: 3000
+            })
+    
+
+    } else {
+        swal({
+            title: '¡Cuidado!',
+            text: 'No tienes ningún producto en el carrito',
+            icon: 'error',
+            confirm: 'Ok', 
+            timer: 3000
+        })
+    }
+    
+}
