@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pan - 1 kg",
+        "precio": 260,
+        "peso": 1,
+        "img": "../fotos/pan.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Galleta de nuez - 1 kg",
+        "precio": 280,
+        "peso": 1,
+        "img": "../fotos/galletadenuez.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Pan rallado - 1 kg",
+        "precio": 200,
+        "peso": 1,
+        "img": "../fotos/panrallado.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Bizcochos - 1 kg",
+        "precio": 800,
+        "peso": 1,
+        "img": "../fotos/bizcochos.jpeg"
+    },
+    {
+        "id": 5,
+        "nombre": "Grisines - 1 kg",
+        "precio": 400,
+        "peso": 1,
+        "img": "../fotos/grisines.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Masitas - 1 kg",
+        "precio": 1000,
+        "peso": 1,
+        "img": "../fotos/masitas.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Masas finas - 1 kg",
+        "precio": 1400,
+        "peso": 1,
+        "img": "../fotos/masasfinas.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Tiramisú - 1 kg",
+        "precio": 1400,
+        "peso": 1,
+        "img": "../fotos/tiramisu.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Milhoja - 1 kg",
+        "precio": 1400,
+        "peso": 1,
+        "img": "../fotos/milhojas.jpeg"
+    },
+    {
+        "id": 10,
+        "nombre": "Merengues - 1 kg",
+        "precio": 1600,
+        "peso": 1,
+        "img": "../fotos/merengues.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Facturas - 1 docena",
+        "precio": 600,
+        "docena": 1,
+        "img": "../fotos/facturas.png"
+    },
+    {
+        "id": 12,
+        "nombre": "Sándwich de miga - 1 docena",
+        "precio": 1200,
+        "docena": 1,
+        "img": "../fotos/sandwichdemiga.jpg"
+    }
+]
