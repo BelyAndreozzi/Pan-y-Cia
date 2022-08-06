@@ -33,12 +33,7 @@
 }
 
 .card {
-  background-color: $color-principal-solido;
-  margin: 5vh;
-  width: 15vw;
-  height: 28vh;
-
-
+  margin: 4vh;
 }
 
 .p_foto {
@@ -73,7 +68,7 @@
 
 
 .sidecart {
-  border-left: solid 2px #000000;
+  border-left: solid 2px #ffc107;
   width: 320px;
   min-width: 320px;
   height: 100vh;
@@ -117,7 +112,7 @@
 }
 
 .product-quantity:after {
-  content: 'x de';
+  
   white-space: nowrap;
   position: absolute;
   z-index: 10;
@@ -136,8 +131,8 @@
 }
 
 .p_cart_info {
-  background-color: $color-principal-transparente;
-  border: solid 1px black;
+  background-color: white;
+  border: solid 1px #ffc107;
   margin: 5px;
 }
 
@@ -150,7 +145,6 @@
 
 .botonfincompra {
   margin-bottom: 10px;
-  border: solid 1px #000000;
   background-color: #faac38b7;
 }
 

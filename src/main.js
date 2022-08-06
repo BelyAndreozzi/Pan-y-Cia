@@ -40,11 +40,11 @@ function renderProducts(data) {
     data.forEach((product) => {
         let producto =
             `
-            <div class="card">
-                <img class="p_foto" src="${product.img}">
-                <div class="card_info"
-                    <p class="p_nombre"> ${product.nombre} </p>
-                    <p class="p_precio"> $${product.precio} </p>
+            <div class="card border-warning" style="width: 18rem;">
+                <img src="${product.img}" class="card-img-top p_foto" alt="imagen del producto">
+                <div class="card-body">
+                    <h5 class="card-title">${product.nombre}</h5>
+                    <p class="card-text">$${product.precio}.</p>
                     <button class="p_boton" id=${product.id}>Añadir al carrito</button>
                 </div>
             </div>

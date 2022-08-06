@@ -203,10 +203,7 @@ footer {
   height: 70%; }
 
 .card {
-  background-color: #fac338;
-  margin: 5vh;
-  width: 15vw;
-  height: 28vh; }
+  margin: 4vh; }
 
 .p_foto {
   width: 6rem;
@@ -236,7 +233,7 @@ footer {
   text-decoration: none; }
 
 .sidecart {
-  border-left: solid 2px #000000;
+  border-left: solid 2px #ffc107;
   width: 320px;
   min-width: 320px;
   height: 100vh;
@@ -274,7 +271,6 @@ footer {
   position: relative; }
 
 .product-quantity:after {
-  content: 'x de';
   white-space: nowrap;
   position: absolute;
   z-index: 10;
@@ -290,8 +286,8 @@ footer {
   align-items: center; }
 
 .p_cart_info {
-  background-color: #fac338b7;
-  border: solid 1px black;
+  background-color: white;
+  border: solid 1px #ffc107;
   margin: 5px; }
 
 .sidecart-price > div {
@@ -301,7 +297,6 @@ footer {
 
 .botonfincompra {
   margin-bottom: 10px;
-  border: solid 1px #000000;
   background-color: #faac38b7; }
 
 .botonfincompra:hover {
