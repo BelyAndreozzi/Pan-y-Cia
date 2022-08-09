@@ -8,10 +8,11 @@
 }
 
 .navegacion{
+    
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
         li{
             list-style: none;
@@ -42,3 +43,9 @@
     display: none;
 }
 
+
+.cart-logo{
+    width: 4rem;
+    height: 3rem;
+    
+}

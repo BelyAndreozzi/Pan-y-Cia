@@ -59,7 +59,7 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-around; }
   .navegacion li {
     list-style: none; }
 
@@ -74,6 +74,10 @@ a {
 
 #nav_mobile {
   display: none; }
+
+.cart-logo {
+  width: 4rem;
+  height: 3rem; }
 
 @media only screen and (max-width: 425px) {
   #nav_desktop {
@@ -285,10 +289,9 @@ footer {
   display: flex;
   align-items: center; }
 
-.p_cart_info {
-  background-color: white;
-  border: solid 1px #ffc107;
-  margin: 5px; }
+.eliminar-item-logo {
+  width: 2rem;
+  height: 1.5rem; }
 
 .sidecart-price > div {
   margin: auto;

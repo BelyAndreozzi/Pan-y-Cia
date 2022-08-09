@@ -25,6 +25,9 @@
     <header class="cabecera">
         <nav id="nav_desktop">
             <ul class="navegacion">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidecart" aria-controls="sidecart">
+                    <img src="../logos/cart.png" class="cart-logo">
+                </button>
                 <li>
                     <a href="../paginas/nosotros.html" class="navegacion_item"> Nosotros </a>
                 </li>
@@ -68,32 +71,32 @@
         <div class="container_productos_carrito">
             <!-- CARRITO DE COMPRAS -->
             <div class="container_carrito_entero">
-                <div class="cart-logo-container">
-                    <img src="../logos/cart.png" alt="Carrito de compras" class="cart-logo" onclick="toggleCart()">
-                </div>
-                <div class="sidecart text-center">
-                    <ul class="nav flex-column" id="cart-item">
-                        <div class="text-dark h4 m-0 px-4 text-center">
-                            <div class="d-inline" onclick="toggleCart()"></div>
-                        </div>
-                    </ul>
-                    <div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="sidecart">
+                    <div class="offcanvas-header">
                         <h3>Carrito de compras</h3>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div id="total-price-units">
+                    <div class="offcanvas-body">
+                        <ul class="nav flex-column" id="cart-item">
+                            <!-- Contenido generado por JS -->
+                        </ul>
+                        <div class="d-flex flex-column align-items-center">
+                            <div id="total-price-units"></div>
+                            <button type="button" class="btn w-75 botonfincompra" id="boton-finalizar-compra">Finalizar
+                                compra</button>
+                            <button type="button" class="btn w-75 botonfincompra" id="boton-reiniciar-carrito">Reiniciar
+                                carrito</button>
+                        </div>
                     </div>
-                    <button type="button" class="btn w-75 botonfincompra" id="boton-finalizar-compra">Finalizar
-                        compra</button>
-                    <button type="button" class="btn w-75 botonfincompra" id="boton-reiniciar-carrito">Reiniciar
-                        carrito</button>
                 </div>
             </div>
-            <section class="container_productos">
-                <h2 id="productos_titulo">Productos</h2>
-                <div id="productos_tienda">
-
-                </div>
-            </section>
+        </div>
+        <section class="container_productos">
+            <h2 id="productos_titulo">Productos</h2>
+            <div id="productos_tienda">
+                <!-- Contenido generado por JS -->
+            </div>
+        </section>
         </div>
 
     </main>
