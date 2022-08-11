@@ -290,8 +290,10 @@ footer {
   align-items: center; }
 
 .eliminar-item-logo {
+  margin-left: 0.3rem;
   width: 2rem;
-  height: 1.5rem; }
+  height: 1.5rem;
+  cursor: pointer; }
 
 .sidecart-price > div {
   margin: auto;

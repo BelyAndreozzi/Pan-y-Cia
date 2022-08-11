@@ -4,12 +4,12 @@ const addItemAlertButton = document.getElementsByClassName("p_boton");
 const reiniciarCarrito = document.getElementById("boton-reiniciar-carrito")
 const finalizarCompra = document.getElementById("boton-finalizar-compra")
 
-
-
+//Inicilización del carrito. 
 let cart = JSON.parse(localStorage.getItem("Carrito")) || [];
 renderCart();
 
 //   ======= Productos de la tienda ========
+// Importación de productos del json. Manejo de error con Sweet Alert.
 (async () => {
 
     try {
@@ -31,7 +31,6 @@ renderCart();
 
 
 // Mostrar los productos en el DOM. 
-
 function renderProducts(data) {
 
     const shop = document.getElementById("productos_tienda");
@@ -68,7 +67,7 @@ function eventAddToCart() {
 
         })
     }
-
+    //Alerta a través de Toastify para mayor visibilidad 
     for (const element of addItemAlertButton) {
         element.addEventListener('click', (e) => {
             Toastify({
@@ -126,11 +125,11 @@ function renderCartItem() {
                     <img src="${item.img}" alt="${item.nombre}" class="img-fluid rounded-start"> 
                 </div>
                 <div class="col-md-8 d-flex flex-col align-items-center">
-                    <div class="card-body col-12 d-flex">   
-                        <div class="btn minus m-0 p-0 col-3 border-danger" onclick="quantityChangeInCart('minus', ${item.id})">-</div>
+                    <div class="card-body col-12 d-flex" id=${item.id}>   
+                        <div class="btn_quantity btn minus m-0 p-0 col-3 border-danger" id="minus">-</div>
                         <div class=" m-0 p-0 h5 col-3 text-center">${item.cantidad}</div>
-                        <div class="btn plus m-0 p-0 col-3 border-success" onclick="quantityChangeInCart('plus', ${item.id})">+</div>
-                        <div class="remove_item col-4 d-flex justify-content-center" id=${item.id}> <img src="../logos/eliminar.png" class="eliminar-item-logo"></div>
+                        <div class="btn_quantity btn plus m-0 p-0 col-3 border-success" id="plus">+</div>
+                        <img src="../logos/eliminar.png" class="remove_ite remove_item eliminar-item-logo">
                     </div>
                     <p class="m-0"><small class="text-muted">Valor unidad: $${item.precio}</small></p>
                 </div>
@@ -139,22 +138,35 @@ function renderCartItem() {
         `
     })
 
+    eventQuantityChange()
     eventRemoveItem();
 }
 
-// Incremento o decremento de unidades en el carrito. 
+// Evento de click para el cambio de cantidades en el carrito
+function eventQuantityChange() {
+
+    const quantityChangeButton = document.getElementsByClassName("btn_quantity");
+    for (const element of quantityChangeButton) {
+
+        element.addEventListener('click', () => {
+            quantityChangeInCart(element.id, element.parentElement.id)
+        })
+
+    }
+}
+
+// Incremento o decremento de unidades en el carrito.
 function quantityChangeInCart(action, id) {
 
     cart = cart.map((item) => {
-
         let cantidad = item.cantidad
         if (item.id == id) {
             if (action === "minus" && cantidad > 1) {
                 cantidad--;
+                console.log("uwu");
             } else if (action === "plus") {
                 cantidad++
             }
-
         }
 
         return {
@@ -177,43 +189,41 @@ function renderTotalPrice() {
     });
 
     totalPriceUnits.innerHTML = ` 
-    <div class="text-dar h5 text-left mx-3">Cantidad de productos: <span class=
-    id="sidecart-total">${totalItems}</span></div>
-    <div class="p-2">
-    <div class="text-dark h5 text-left mx-3">Valor total: <span class="text-success"
-    id="sidecart-total">$${totalPrice}</span></div>
-    <div class="p-2">
+    <div class="text-dar h5 text-left mx-3">Cantidad de productos: 
+        <span id="sidecart-total">${totalItems}</span>
+    </div>
+    <div class="text-dark h5 text-left mx-3">Valor total: 
+        <span class="text-success" id="sidecart-total">$${totalPrice}</span>
+    </div>
 `
 }
 
-//Eliminación de un producto del carrito AYUDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+//Evento de click para la eliminación de un item en el carrito.
 function eventRemoveItem() {
-    
+
     const removeItemButton = document.getElementsByClassName('remove_item');
     for (const element of removeItemButton) {
         element.addEventListener('click', () => {
-            removeItem(element.id)
+            removeItem(element.parentElement.id)
         })
     }
 }
-
+//Eliminación de un producto del carrito.
 function removeItem(id) {
-    cart = cart.filter((item) => item.id !== id) //Mira los items y se queda con los de la id distinta al eliminado
+    cart = cart.filter((item) => item.id != id)
 
     renderCart()
 }
 
-//Reset carrito de compra
+//Reinicio del carrito de compra.
+reiniciarCarrito.addEventListener("click", cartReset);
+
 function cartReset() {
     cart = [];
     renderCart();
 };
 
-reiniciarCarrito.addEventListener("click", cartReset);
-
-
-
-//Finalización de compra
+//Finalización de compra.
 finalizarCompra.addEventListener("click", checkout);
 
 function checkout() {
